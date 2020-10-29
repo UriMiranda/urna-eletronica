@@ -65,6 +65,7 @@ const Voting = (function Voting() {
 
   vm.undoVote = function (event) {
     event.preventDefault();
+    $("#NumberKeyboard").show();
     vm.position = 0;
     vm.confirm = false;
     vm.voteNumbers.val("");
@@ -83,6 +84,7 @@ const Voting = (function Voting() {
   vm.confirmVote = function (event) {
     event.preventDefault();
     $(".screen").hide();
+    $("#NumberKeyboard").hide();
     if (vm.confirm) {
       vm.confirm = false;
       const candidate = vm.searchByCandidate();
@@ -161,6 +163,7 @@ const Voting = (function Voting() {
 
   vm.goToRoleVote = function (index) {
     const voting = vm.voting[index];
+    $("#NumberKeyboard").show();
     $(".CandidateTitle").text(voting.name);
     $("#CandidateNumberInputs").html("");
     for (let i = 0; i < voting.numbersLength; i++) {
