@@ -97,8 +97,8 @@ body {
   display: flex;
   justify-content: space-around;
   padding-bottom: 40px;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
   align-items: flex-end;
 }
 
